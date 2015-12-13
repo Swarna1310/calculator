@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+   <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+ <script>
+  var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope,$http) {
+$scope.count="";
+
+});
+  </script> 
+
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1><%= title %></h1>
+    <p><label name="inputexpr"><h3 style="color:red"><%= inputtext %></h3></label></p><br>
+  <div ng-app="myApp" ng-controller="myCtrl">  
+   <form method="post" action="/compute">
+    <table>
+    <tr><td colspan="4">
+         <input class="box" id="calc" type="text" name="expr" size="34" ng-model="count" value="<%= expr %>"/>
+    </td><td><label class="err" name="errset"></label></tr>
+    <tr><td><br></td></tr>
+    <tr><td><button type="button" ng-click="count=count+7">7</button></td>
+    <td><button type="button"  ng-click="count=count+8">8</button></td>
+    <td><button type="button"  ng-click="count=count+9">9</button></td>
+    <td><button type="button"  ng-click="count=count+'/'">/</button></td></tr>
+    <tr><td><button type="button"  ng-click="count=count+4">4</button></td>
+    <td><button type="button"  ng-click="count=count+5">5</button></td>
+    <td><button type="button"  ng-click="count=count+6">6</button></td>
+    <td><button type="button"  ng-click="count=count+'*'">*</button></td></tr>
+    <tr><td><button type="button"  ng-click="count=count+1">1</button></td>
+    <td><button type="button"  ng-click="count=count+2">2</button></td>
+    <td><button type="button"  ng-click="count=count+3">3</button></td>
+    <td><button type="button"  ng-click="count=count+'-'">-</button></td></tr>
+    <tr><td><button type="button"  ng-click="count=count+0">0</button></td>
+    <td><button type="button" ng-click="count=''">clear</button></td>
+    <td><button type="submit">=</button></td>
+    <td><button type="button"  ng-click="count=count+'+'">+</button></td></tr>
+    </table>
+   </form> 
+   </div>
+  </body>
+ </html>  

@@ -1,0 +1,36 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color:lightblue;
+}
+
+a {
+  color: #00B7FF;
+}
+
+button{
+	width: 70px;
+	height:70px;
+	display: table-cell;
+    vertical-align: middle;
+    text-align:center;
+    background-color: rgb(208, 208, 208);
+    cursor: pointer;
+    font-family: Roboto-Regular, helvetica, arial, sans-serif;
+    font-size: larger;
+     -webkit-border-radius: 15px;
+}
+
+.btn{
+	padding: 0;
+	border: none;
+	background: none;
+ 	background-color: rgb(208, 208, 208);
+}
+
+.box{
+	height:50px;
+	font-size:larger;
+	text-align:right;
+	
+}
